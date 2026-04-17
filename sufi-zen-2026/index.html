@@ -68,7 +68,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      min-height: 520px;
+      min-height: 220px;
       overflow: hidden;
     }
 
@@ -116,23 +116,24 @@
 
     .hero-image {
       height: 100%;
-      min-height: 520px;
+      min-height: 220px;
       overflow: hidden;
     }
 
     .hero-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: center top;
+      object-fit: contain;
+      object-position: center center;
       display: block;
       filter: grayscale(15%);
     }
 
     @media (max-width: 640px) {
       header { grid-template-columns: 1fr; }
-      .hero-image { min-height: 300px; }
-      .hero-text { padding: 40px 24px; }
+      .hero-image { min-height: unset; max-height: unset; padding: 24px 60px 24px; background: transparent; display: flex; justify-content: center; }
+      .hero-image img { object-fit: contain; height: auto; max-height: 220px; }
+      .hero-text { padding: 32px 24px 16px; }
     }
 
     /* ── Rose artwork panel ── */
@@ -603,7 +604,8 @@
           </div>
         </div>
         <p class="deadline">Registration deadline: Sunday, May 17, 2026</p>
-        <p style="margin-top:10px;font-size:0.95rem;">Contact Utsav for any constraints.</p>
+        <p style="margin-top:10px;font-size:0.95rem;">All-inclusive: full retreat participation, meals, and shared accommodation.</p>
+        <p style="margin-top:6px;font-size:0.95rem;">Contact Utsav for any constraints.</p>
       </div>
     </div>
   </section>
